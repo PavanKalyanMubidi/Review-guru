@@ -175,6 +175,7 @@ const Index = () => {
               <i class="fa-solid fa-star" style={{color: "#d9d8d4"}}></i>
             </div>
           </div>
+          {/* //iva */}
         </div>
         <div className="col-sm-12 col-md-6 col-lg-2">
           <div className="card">
