@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Open Sans", sans-serif;
 }
+
 /*header styling starts*/
 header {
   position: fixed;
@@ -21,69 +24,77 @@ header {
   box-shadow: 0px 8px 7px -11px #000;
   -webkit-box-shadow: 0px 8px 7px -11px #000;
 }
-.logo-image{
-    height: 50px;
-    width: 80px;
+
+.logo-image {
+  height: 80px;
+  width: 100px;
 }
-.account{
-    font-size: 40px;
+
+.account {
+  font-size: 40px;
 }
-.notification{
-    font-size: 40px;
-    margin-left: 15px;
+
+.notification {
+  font-size: 40px;
+  margin-left: 15px;
 }
+
 .hamburger-icon {
   background: transparent;
   border: transparent;
   font-size: 26px;
   line-height: 36px;
 }
+
 .hamburger-icon:hover {
   cursor: pointer;
 }
+
 .search-icon {
   text-decoration: none;
   color: #3d4244;
 }
+
 .search-icon i {
   margin-left: 10px;
 }
+
 /*navbar styling starts*/
 .nav {
-  border: 20px solid #d8d8d8;
   border-left: 0px;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   position: fixed;
-  border-radius: 0px 50% 50% 0px;
+  border-radius: 0px;
   top: -35px;
   overflow: hidden;
-  left: -100%;
-  width: 300px;
-  background: url("https://www.yudiz.com/codepen/hero-banner/nav-banner.jpg")
-    no-repeat center center / cover;
-  height: calc(100vh + 97px);
-  min-height: 700px;
+  width: 330px;
+  height: 110vh;
+  margin-top: 104px;
   display: flex;
   display: -webkit-flex;
   align-items: center;
   -webkit-align-items: center;
+;
 }
+
 .nav:after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   background: rgba(0, 0, 0, 0.8);
-  width: 200%;
-  height: 100%;
-  border-radius: 0px 50% 50% 0px;
+  width: 82%;
+  height: 110vh;
+  margin-top: 104px;
+  border-radius: 0px;
+
 }
+
 .nav-content {
   margin-left: 40px;
   position: relative;
   z-index: 1;
 }
+
 .nav-content .cross-btn {
   margin-bottom: 50px;
   background: transparent;
@@ -91,17 +102,20 @@ header {
   border: transparent;
   font-size: 24px;
   line-height: 34px;
-  padding: 5px 15px;
+  padding: 5px ;
 }
+
 .nav-content .cross-btn:hover {
   cursor: pointer;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
+
 .nav-content li {
   display: block;
   margin-bottom: 25px;
 }
+
 .nav-content li a {
   text-decoration: none;
   color: #fff;
@@ -112,10 +126,12 @@ header {
   position: relative;
   padding: 5px 15px;
 }
+
 .nav-content li a:hover::after {
   opacity: 1;
   width: 100%;
 }
+
 .nav-content li a::after {
   opacity: 0;
   content: "";
@@ -132,13 +148,16 @@ header {
   -webkit-transform: skewX(15deg);
   margin-left: 2px;
 }
+
 .terms-links {
   margin-top: 120px;
 }
+
 .terms-links li a {
   font-size: 12px;
   line-height: 22px;
 }
+
 /*header styling ends*/
 /*banner styling starts*/
 .container {
@@ -146,6 +165,7 @@ header {
   margin: 0px auto;
   padding: 0px 15px;
 }
+
 .banner-image {
   display: none;
 }
@@ -156,6 +176,7 @@ header {
   align-items: center;
   -webkit-align-items: center;
 }
+
 .banner-content h1 {
   color: #3d4244;
   font-weight: 300;
@@ -163,13 +184,16 @@ header {
   line-height: 70px;
   margin-bottom: 40px;
 }
+
 .banner-content h1 b {
   font-weight: 700;
 }
+
 .banner-content span {
   color: #fccb02;
   font-weight: 700;
 }
+
 .theme-btn {
   background-color: #fccb02;
   padding: 16px 50px;
@@ -182,16 +206,19 @@ header {
   -webkit-transition: all 0.5s;
   border-radius: 5px;
 }
+
 .theme-btn:hover {
   background-color: transparent;
   border: 1px solid #fccb02;
 }
+
 /*jquery styling */
 .nav-left {
   left: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
+
 /*banner styling ends*/
 @media (min-width: 1450px) and (max-width: 1599px) {
   .container {
@@ -200,42 +227,51 @@ header {
 
   .nav {
     width: 500px;
-    top: -43px;
+    top: -40px;
   }
 }
+
 @media (min-width: 1600px) and (max-width: 1920px) {
   .container {
     width: 1510px;
   }
+
   .nav {
     width: 500px;
     top: -48px;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .nav {
     width: 400px;
-    top: -45px;
+    top: -40px;
   }
+
   .nav-content .cross-btn {
     margin-bottom: 30px;
   }
+
   .nav-content li {
     margin-bottom: 20px;
   }
+
   .terms-links {
     margin-top: 60px;
   }
+
   /*banner styling starts*/
   .container {
     width: 960px;
     padding: 0px 15px;
   }
+
   .banner-content h1 {
     font-size: 37px;
     line-height: 60px;
     margin-bottom: 20px;
   }
+
   .theme-btn {
     padding: 14px 50px;
   }
@@ -246,172 +282,295 @@ header {
     width: 370px;
     top: -44px;
   }
+
   .nav-content .cross-btn {
     margin-bottom: 30px;
   }
+
   .nav-content li {
     margin-bottom: 20px;
   }
+
   .terms-links {
     margin-top: 100px;
   }
+
   /*banner styling starts*/
   .container {
     width: 720px;
     padding: 0px 15px;
   }
+
   .banner-content h1 {
     font-size: 27px;
     line-height: 50px;
     margin-bottom: 10px;
   }
+
   .theme-btn {
     padding: 14px 40px;
   }
 }
+
 @media (max-width: 767px) {
   .nav {
     width: 295px;
     top: -44px;
   }
+
   .nav-content {
     margin-left: 20px;
   }
+
   .nav-content .cross-btn {
     margin-bottom: 20px;
   }
+
   .nav-content li {
     margin-bottom: 10px;
   }
+
   .nav-content li a {
     font-size: 14px;
     line-height: 24px;
   }
+
   .terms-links {
     margin-top: 50px;
   }
+
   header {
     padding: 20px;
   }
+
   header .search-icon span {
     display: none;
   }
+
   header .search-icon i {
     margin: 0px;
   }
+
   header .logo img {
     width: 10px;
   }
+
   .hamburger-icon {
     font-size: 22px;
     line-height: 32px;
   }
+
   /*banner styling starts*/
   .banner {
     background: transparent;
   }
+
   .banner-image {
     display: block;
   }
+
   .banner-image img {
     display: block;
     max-width: 100%;
   }
+
   .banner-inner {
     flex-direction: column;
     margin-top: 100px;
     height: auto;
   }
+
   .banner-content {
     margin-top: 15px;
     text-align: center;
   }
+
   .container {
     width: 100%;
     padding: 0px 15px;
   }
+
   .banner-content h1 {
     font-size: 22px;
     line-height: 40px;
     margin-bottom: 20px;
   }
+
   .theme-btn {
     padding: 10px 25px;
     font-size: 14px;
     line-height: 24px;
   }
 }
-.dropdown-content1{
-    list-style: none;
-    background-color: black;
-    color: white;
-    height: fit-content;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 10px;
+
+.dropdown-content1 {
+  list-style: none;
+  background-color: black;
+  color: white;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
 }
-.logout{
-    background-color:blue;
-    color: white;
-    border-radius: 10px;
-    padding: 5px;
+
+.logout {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
 }
-.profile{
-    background-color:green;
-    color: white;
-    border-radius: 10px;
-    padding: 5px; 
+
+.profile {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
 }
+
 .card {
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-    height:fit-content;
-    width: fit-content;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-    align-items: center;
+  background-color: #f8f8f8;
+  border: 1px solid #f6dbdb;
+  padding: 20px;
+  margin-bottom: 20px;
+  height: fit-content;
+  width: 200px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  margin-left: 82px;
+}
+
+.Card4 {
+  background-color: #f8f8f8;
+  border: 1px solid #f6dbdb;
+  padding: 20px;
+  margin-bottom: 20px;
+  height: fit-content;
+  width: 200px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  margin-left: 82px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #b9afaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.letter {
+  color: blue;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.names {
+  color: green;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.span-names {
+  color: #646161;
+  font-weight: 700;
+}
+
+.jet-king {
+  width: 87%;
+
+}
+
+.time {
+  font-size: 10px;
+  font-weight: 500;
+  color: #a09a9a;
+}
+
+.pavan {
+  margin-top: 18vh;
+
+}
+
+.companyimag {
+  width: 100px;
+  height: 60px;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.line-cls {
+  color: black;
+  background-color: #000;
+}
+
+.post-agatha-cls {
+  font-size: xx-small;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+.afailed-mystery-cls {
+  font-size: xx-small;
+  text-align: start;
+}
+
+.read-complete-cls {
+  font-size: xx-small;
+  color: rgb(29, 105, 29);
+  text-decoration: none;
+}
+
+.fa-solid {
+  padding-top: 8px;
+  padding-left: 8px;
+}
+
+.line {
+
+  border-left: none;
+  border-bottom: none; 
+  border-right: none;
+  background-color: white;
+}
+.buttonoption{
+  margin-top: 140px;
+  margin-left: 180vh;
+  margin-right: 10px;
+}
+.shifted-content {
+  margin-left: 0; /* Adjust this value to the width of your sidebar */
+  transition: margin-left 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Optionally, adjust the width of the container */
+.content-container {
+  transition: margin-left 0.3s ease; /* Add a smooth transition effect */
+
+
+}
+
+/* Adjust the margin-left for larger screens if needed */
+@media (min-width: 768px) {
+  .shifted-content {
+    margin-left: 250px; /* Adjust to your sidebar width */
   }
-  .circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #b9afaf;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-    
+}
+/* Hide the navigation content within the header on mobile screens */
+@media (max-width: 768px) {
+  .show-nav-on-mobile {
+    display: none;
   }
-  
-  .letter {
-    color: blue;
-    font-size: 20px;
-    margin: 10px;
-  }
-  .names{
-    color: green;
-    font-weight: 500;
-    font-size: 13px;
-    margin-top: 30px;
-    margin-left: 10px;
-  }
-  .span-names{
-    color: #646161;
-    font-weight: 700;
-  }
- .jet-king{
-    width: 87%;
-  
- }
- .time{
-    font-size: 10px;
-    font-weight: 500;
-    color: #a09a9a;
- }
- .pavan{
-    justify-content: center;
-    margin-top: 30vh;
-    margin-left: 50vh;
- }
+}

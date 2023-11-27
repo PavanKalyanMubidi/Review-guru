@@ -1,0 +1,134 @@
+.card11 {
+  background-color: #f8f8f8;
+  border: 1px solid #f6dbdb;
+  padding: 20px;
+  margin-top: 200px;
+  margin-bottom: 20px;
+  height: 340px;
+  width: 250px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.par {
+  margin-left: 120px;
+  margin-right: 100px;
+  font-size: 17px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: oblique;
+}
+
+.card12 {
+  background-color: #f8f8f8;
+  border: 1px solid #f6dbdb;
+  padding: 20px;
+  margin-top: 200px;
+  margin-bottom: 20px;
+  height: fit-content;
+  width: 64%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+.reviewbtn {
+  background-color: red;
+  color: white;
+  border-color: red;
+  height: 50px;
+  width: 300px;
+  align-items: center;
+  padding-left: 40px;
+  font-size: 20px;
+  font-style: oblique;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 10px;
+}
+
+.favorite {
+  height: 30px;
+  width: 30px;
+  border: none;
+  margin-left: 10px;
+  background-color: none;
+}
+
+.heading1 {
+  font-size: 17px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: oblique;
+}
+
+.rating {
+  background-color: green;
+  border-color: green;
+  color: white;
+  border-radius: 10px;
+  margin-left: 120px;
+  height: 30px;
+  width: 70px;
+  margin-right: 100px;
+}
+
+.image {
+  width: 200px;
+  height: 100px;
+  margin-top: 100px;
+}
+
+.range {
+  margin-left: 40px;
+  margin-right: 50px;
+}
+
+.ram {
+  background-color: rgb(75, 75, 133);
+  color: white;
+  border-radius: 10px;
+  height: 50px;
+  width: 300px;
+  margin-left: 200px;
+  margin-top: 23px;
+}
+
+.card123 {
+  background-color: #f8f8f8;
+  border: 1px solid #f6dbdb;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: fit-content;
+  width: 75vw;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  margin-left: 40px;
+}
+
+.comment {
+  background-color: blue;
+  border-radius: 10px;
+  margin-left: 10px;
+  color: white;
+  height: 40px;
+  width: 150px;
+  border-color: blue;
+}
+.shifted-content {
+    margin-left: 0; /* Adjust this value to the width of your sidebar */
+    transition: margin-left 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  /* Optionally, adjust the width of the container */
+  .content-container {
+    transition: margin-left 0.3s ease; /* Add a smooth transition effect */
+  
+ 
+  }
+  
+  /* Adjust the margin-left for larger screens if needed */
+  @media (min-width: 768px) {
+    .shifted-content {
+      margin-left: 250px; /* Adjust to your sidebar width */
+    }
+  }
+  
