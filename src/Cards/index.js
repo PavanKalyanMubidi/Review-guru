@@ -63,52 +63,116 @@ const Index1 = () => {
   const notification = () => {
     alert("notification");
   };
+  const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
+
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowAlert(true);
+  };
+
+  
+  const handleMouseLeave = () => {
+    setShowAlert(false);
+  };
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen1(!isDropdownOpen1);
+  };
+  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
+
+  const handleDropdownToggle1 = () => {
+    setIsDropdownOpen2(!isDropdownOpen2);
+  };
 
   return (
     <>
       <header>
-        <button className="hamburger-icon" onClick={openNav}>
-          <span class="material-symbols-outlined">menu</span>
+        <button
+          className="hamburger-icon"
+          onClick={isNavOpen ? closeNav : openNav}
+        >
+          <span className="material-symbols-outlined">menu</span>
         </button>
         <a href="index.html">
           <img src={logo} alt="logo-image" className="logo-image" />
         </a>
-        <a href="#" className="search-icon">
-          <span
-            class="material-symbols-outlined notification"
-            onClick={notification}
-          >
-            notifications
-          </span>
-          <span
-            class="material-symbols-outlined account"
-            onClick={toggleDropdown}
-          >
-            account_circle
-          </span>
+        <a href="#" className="search-icon me-5">
+        <div>
+            <ul className="d-flex flex-row" style={{ listStyle: "none" }}>
+              <li>
+                <div className="btn-group dropleft dropdown-user mt-2">
+                  <i
+                    className="fa fa-user-o dropdown-toggle"
+                    onClick={handleDropdownToggle}
+                    aria-haspopup="true"
+                    style={{fontSize:"25px"}}
+                    aria-expanded={isDropdownOpen1 ? "true" : "false"}
+                  ></i>
+                  <ul
+                    className={`dropdown-menu ${isDropdownOpen1 ? "show" : ""}`}
+                  >
+                    <li>
+                      <div className="alert-card">
+                        <p>my profile</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                {/* <div class="btn-group dropleft dropdown-alert">
+                  <i
+                    class="fa fa-bell-o dropdown-toggle"
+                    onClick={handleDropdownToggle1} 
+                    style={{fontSize:"25px"}}
+                    aria-haspopup="true"
+                    aria-expanded={isDropdownOpen2 ? "true" : "false"}
+                  ></i>
+                  <ul
+                    className={`dropdown-menu ${isDropdownOpen2 ? "show" : ""}`}
+                  >
+                    <li>
+                      <div className="alert-card">
+                        <p>Notification</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div> */}
+
+<div className="notification-wrapper">
+      <div
+        className="notification-icon mx-5"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+      <i class="fa-regular fa-bell"></i>
+      </div>
+      {showAlert && (
+        <div className="alert-card">
+          
+          New Notifications
+        </div>
+      )}
+    </div>
+              </li>
+            </ul>
+          </div>
         </a>
       </header>
       {isNavOpen && (
         <div className="nav nav-left">
           <div className="nav-content">
-            <img
-              src={logo1}
-              alt="logo-image"
-              className="logo-image"
-              style={{ marginRight: "50px", paddingBottom: "" }}
-            />
-            <button className="cross-btn" onClick={closeNav}>
-              <span class="material-symbols-outlined">close</span>
-            </button>
+            <img src={logo1} alt="logo-image" className="logo-image1" />
             <ul>
               <li>
-                <span class="material-symbols-outlined text-white">home</span>{" "}
+                <span class="material-symbols-outlined text-white">home</span>
                 <a href="#"> Home </a>
               </li>
               <li>
                 <span class="material-symbols-outlined text-white">
                   add_box
-                </span>{" "}
+                </span>
                 <a href="#"> about us </a>
               </li>
               <li>
@@ -125,40 +189,48 @@ const Index1 = () => {
               <li>
                 <span class="material-symbols-outlined text-white">
                   cast_connected
-                </span>{" "}
+                </span>
                 <a href="#">Terms & Conditions</a>
               </li>
               <li>
                 <span class="material-symbols-outlined text-white">
                   security
-                </span>{" "}
+                </span>
                 <a href="#">Privacy Policy</a>
               </li>
             </ul>
           </div>
         </div>
       )}
+
       {isDropdownOpen && (
         <div className="buttonoption">
-          <ul className="dropdown-content">
-            <li className="profile">my Profile</li>
-
-            <li className="logout">Logout</li>
-          </ul>
+          <card className="d-flex flex-column">
+            <button className="btn btn-success m-2">
+              <i class="fa-regular fa-user p-1"></i>Profile
+            </button>
+            <button className="btn btn-primary m-2">
+              <i class="fa-solid fa-arrow-right-from-bracket p-1"></i>Logout
+            </button>
+          </card>
         </div>
       )}
       <div
         className={`content-container ${isNavOpen ? "shifted-content" : ""}`}
       >
+        
         <div className="row">
-          <div className="col-sm-12 col-md-6 col-lg-3 card11 mx-5">
-            <img
-              src="https://www.bestmediainfo.com/uploads/2013/06/jetking.jpg"
-              className="image"
-            />
+          <div className="col-lg-3 col-md-6 col-sm-12  mb-4">
+          <div class="card11 mx-auto">
+        <img
+          src="https://www.bestmediainfo.com/uploads/2013/06/jetking.jpg"
+          class="image"
+          alt="Image"
+        />
+      </div>
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-7 card12">
+          <div className="col-lg-7 col-md-6 col-sm-12 card12">
             <div
               className="d-flex flex-row p-1"
               style={{
@@ -212,33 +284,33 @@ const Index1 = () => {
               </p>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-2"></div>
-          <div className=" col-sm-12 col-md-6 col-lg-10 d-flex flex-row">
+          <div className="col-lg-2 col-md-6 col-sm-12"></div>
+          <div className=" col-lg-10 col-md-6 col-sm-12 d-flex flex-row">
             <div className="reviewbtn d-flex flex-row">
               <span class="material-symbols-outlined">edit_square</span>
               Write Your Review
             </div>
             <button className="ram">Owner? Claim this Business</button>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-10 card123">
+          <div className="col-lg-10 col-md-6 col-sm-12 card123">
             <div>
               <button
-                className="comment"
+                className="comment mb-2"
                 onClick={() => submitReview("New review")}
               >
                 Submit Review
               </button>
               <button
-                className="comment"
+                className="comment mb-2"
                 onClick={() => editReview(0, "Updated review")}
               >
                 Edit Review
               </button>
-              <button className="comment" onClick={() => deleteReview(0)}>
+              <button className="comment mb-2" onClick={() => deleteReview(0)}>
                 Delete Review
               </button>
               <button
-                className="comment btn btn-primary"
+                className="comment btn btn-primary  mb-2"
                 data-bs-toggle="modal"
                 data-bs-target="#myModal"
               >
@@ -251,7 +323,7 @@ const Index1 = () => {
                       <h4 className="modal-title">Add Review</h4>
                       <button
                         type="button"
-                        className="btn-close"
+                        className="btn-close mb-2"
                         data-bs-dismiss="modal"
                       ></button>
                     </div>
@@ -270,7 +342,7 @@ const Index1 = () => {
                     <div className="modal-footer">
                       <button
                         type="button"
-                        className="btn btn-primary"
+                        className="btn btn-primary mb-2"
                         onClick={() => {
                           addComment();
                           document
@@ -283,7 +355,7 @@ const Index1 = () => {
                       </button>
                       <button
                         type="button"
-                        className="btn btn-secondary"
+                        className="btn btn-secondary mb-2"
                         data-bs-dismiss="modal"
                       >
                         Close
@@ -292,14 +364,13 @@ const Index1 = () => {
                   </div>
                 </div>
               </div>
-              <button className="comment" onClick={incrementLikes}>
+              <button className="comment mb-2" onClick={incrementLikes}>
                 Like
               </button>
-              <button className="comment" onClick={toggleFollowing}>
+              <button className="comment mb-2" onClick={toggleFollowing}>
                 {following ? "Unfollow" : "Follow"}
               </button>
             </div>
-            {/* Display Reviewer Activities */}
             <div>
               <div className="comments">
                 <h3>Reviews</h3>

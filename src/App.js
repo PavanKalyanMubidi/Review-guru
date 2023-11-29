@@ -3,6 +3,7 @@ import Index1 from './Cards';
 import Index from './Home';
 
 import { Routes,Route } from 'react-router-dom';
+import Profile from './Profile';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
      <Routes>
       <Route path='/' element={<Index/>}/>
       <Route path='/cards' element={<Index1/>}/>
+      <Route path='/profile' element={<Profile/>} />
      </Routes>
     </div>
   );

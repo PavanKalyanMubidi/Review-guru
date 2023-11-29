@@ -2,7 +2,7 @@
   background-color: #f8f8f8;
   border: 1px solid #f6dbdb;
   padding: 20px;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-bottom: 20px;
   height: 340px;
   width: 250px;
@@ -21,7 +21,7 @@
   background-color: #f8f8f8;
   border: 1px solid #f6dbdb;
   padding: 20px;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-bottom: 20px;
   height: fit-content;
   width: 64%;
@@ -91,6 +91,17 @@
   margin-top: 23px;
 }
 
+.logo-image1 {
+  height: 60px;
+  width: 80px;
+  margin-top: -70%;
+}
+
+.logo-image {
+  height: 80px;
+  width: 100px;
+}
+
 .card123 {
   background-color: #f8f8f8;
   border: 1px solid #f6dbdb;
@@ -113,22 +124,59 @@
   width: 150px;
   border-color: blue;
 }
+
 .shifted-content {
-    margin-left: 0; /* Adjust this value to the width of your sidebar */
-    transition: margin-left 0.3s ease; /* Add a smooth transition effect */
+  margin-left: 0; 
+  transition: margin-left 0.3s ease; 
+}
+
+
+.content-container {
+  transition: margin-left 0.3s ease; 
+}
+
+
+@media (min-width: 768px) {
+  .shifted-content {
+    margin-left: 250px; 
   }
-  
-  /* Optionally, adjust the width of the container */
-  .content-container {
-    transition: margin-left 0.3s ease; /* Add a smooth transition effect */
-  
- 
+}
+
+notification-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-icon {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.alert-card {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: none; 
+}
+
+.notification-wrapper:hover .alert-card {
+  display: block; 
+}
+/* Existing CSS */
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  /* Modify styles for responsiveness */
+
+  .card12 {
+    width: 90%; /* Adjust the width for smaller screens */
   }
-  
-  /* Adjust the margin-left for larger screens if needed */
-  @media (min-width: 768px) {
-    .shifted-content {
-      margin-left: 250px; /* Adjust to your sidebar width */
-    }
-  }
-  
+
+  /* Add more modifications as needed for other elements */
+}

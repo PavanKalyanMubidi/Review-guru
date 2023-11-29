@@ -25,9 +25,18 @@ header {
   -webkit-box-shadow: 0px 8px 7px -11px #000;
 }
 
+.logo-image1 {
+  height: 60px;
+  width: 80px;
+  margin-top: -70%;
+}
 .logo-image {
   height: 80px;
   width: 100px;
+  align-items: center;
+}
+.ul .li{
+  list-style: none;
 }
 
 .account {
@@ -50,14 +59,7 @@ header {
   cursor: pointer;
 }
 
-.search-icon {
-  text-decoration: none;
-  color: #3d4244;
-}
 
-.search-icon i {
-  margin-left: 10px;
-}
 
 /*navbar styling starts*/
 .nav {
@@ -93,22 +95,6 @@ header {
   margin-left: 40px;
   position: relative;
   z-index: 1;
-}
-
-.nav-content .cross-btn {
-  margin-bottom: 50px;
-  background: transparent;
-  color: #fff;
-  border: transparent;
-  font-size: 24px;
-  line-height: 34px;
-  padding: 5px ;
-}
-
-.nav-content .cross-btn:hover {
-  cursor: pointer;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
 }
 
 .nav-content li {
@@ -158,14 +144,6 @@ header {
   line-height: 22px;
 }
 
-/*header styling ends*/
-/*banner styling starts*/
-.container {
-  width: 1170px;
-  margin: 0px auto;
-  padding: 0px 15px;
-}
-
 .banner-image {
   display: none;
 }
@@ -201,7 +179,7 @@ header {
   color: #3d4244;
   display: inline-block;
   font-weight: 600;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   border-radius: 5px;
@@ -217,215 +195,6 @@ header {
   left: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
-}
-
-/*banner styling ends*/
-@media (min-width: 1450px) and (max-width: 1599px) {
-  .container {
-    width: 1310px;
-  }
-
-  .nav {
-    width: 500px;
-    top: -40px;
-  }
-}
-
-@media (min-width: 1600px) and (max-width: 1920px) {
-  .container {
-    width: 1510px;
-  }
-
-  .nav {
-    width: 500px;
-    top: -48px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .nav {
-    width: 400px;
-    top: -40px;
-  }
-
-  .nav-content .cross-btn {
-    margin-bottom: 30px;
-  }
-
-  .nav-content li {
-    margin-bottom: 20px;
-  }
-
-  .terms-links {
-    margin-top: 60px;
-  }
-
-  /*banner styling starts*/
-  .container {
-    width: 960px;
-    padding: 0px 15px;
-  }
-
-  .banner-content h1 {
-    font-size: 37px;
-    line-height: 60px;
-    margin-bottom: 20px;
-  }
-
-  .theme-btn {
-    padding: 14px 50px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .nav {
-    width: 370px;
-    top: -44px;
-  }
-
-  .nav-content .cross-btn {
-    margin-bottom: 30px;
-  }
-
-  .nav-content li {
-    margin-bottom: 20px;
-  }
-
-  .terms-links {
-    margin-top: 100px;
-  }
-
-  /*banner styling starts*/
-  .container {
-    width: 720px;
-    padding: 0px 15px;
-  }
-
-  .banner-content h1 {
-    font-size: 27px;
-    line-height: 50px;
-    margin-bottom: 10px;
-  }
-
-  .theme-btn {
-    padding: 14px 40px;
-  }
-}
-
-@media (max-width: 767px) {
-  .nav {
-    width: 295px;
-    top: -44px;
-  }
-
-  .nav-content {
-    margin-left: 20px;
-  }
-
-  .nav-content .cross-btn {
-    margin-bottom: 20px;
-  }
-
-  .nav-content li {
-    margin-bottom: 10px;
-  }
-
-  .nav-content li a {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .terms-links {
-    margin-top: 50px;
-  }
-
-  header {
-    padding: 20px;
-  }
-
-  header .search-icon span {
-    display: none;
-  }
-
-  header .search-icon i {
-    margin: 0px;
-  }
-
-  header .logo img {
-    width: 10px;
-  }
-
-  .hamburger-icon {
-    font-size: 22px;
-    line-height: 32px;
-  }
-
-  /*banner styling starts*/
-  .banner {
-    background: transparent;
-  }
-
-  .banner-image {
-    display: block;
-  }
-
-  .banner-image img {
-    display: block;
-    max-width: 100%;
-  }
-
-  .banner-inner {
-    flex-direction: column;
-    margin-top: 100px;
-    height: auto;
-  }
-
-  .banner-content {
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  .container {
-    width: 100%;
-    padding: 0px 15px;
-  }
-
-  .banner-content h1 {
-    font-size: 22px;
-    line-height: 40px;
-    margin-bottom: 20px;
-  }
-
-  .theme-btn {
-    padding: 10px 25px;
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
-
-.dropdown-content1 {
-  list-style: none;
-  background-color: black;
-  color: white;
-  height: fit-content;
-  width: fit-content;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.logout {
-  background-color: blue;
-  color: white;
-  border-radius: 10px;
-  padding: 5px;
-}
-
-.profile {
-  background-color: green;
-  color: white;
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 10px;
 }
 
 .card {
@@ -449,8 +218,8 @@ header {
   width: 200px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
   align-items: center;
-  margin-left: 82px;
-}
+  margin-left: 62px;
+}  
 
 .circle {
   width: 40px;
@@ -496,8 +265,7 @@ header {
 }
 
 .pavan {
-  margin-top: 18vh;
-
+  margin-top: 130px;
 }
 
 .companyimag {
@@ -539,38 +307,70 @@ header {
 }
 
 .line {
-
   border-left: none;
   border-bottom: none; 
   border-right: none;
   background-color: white;
 }
-.buttonoption{
-  margin-top: 140px;
-  margin-left: 180vh;
-  margin-right: 10px;
-}
+
 .shifted-content {
-  margin-left: 0; /* Adjust this value to the width of your sidebar */
-  transition: margin-left 0.3s ease; /* Add a smooth transition effect */
+  margin-left: 0; 
+  transition: margin-left 0.3s ease; 
 }
 
-/* Optionally, adjust the width of the container */
+
 .content-container {
-  transition: margin-left 0.3s ease; /* Add a smooth transition effect */
+  transition: margin-left 0.3s ease; 
 
 
 }
 
-/* Adjust the margin-left for larger screens if needed */
+
 @media (min-width: 768px) {
   .shifted-content {
-    margin-left: 250px; /* Adjust to your sidebar width */
+    margin-left: 250px; 
   }
 }
-/* Hide the navigation content within the header on mobile screens */
+
+.text-center heading{
+  margin: 20px;
+}
+
 @media (max-width: 768px) {
-  .show-nav-on-mobile {
-    display: none;
-  }
+  .nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px; 
+    background-color: #333;
+    color: white;
+  } 
+}
+
+.notification-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-icon {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.alert-card {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: none; 
+}
+
+.notification-wrapper:hover .alert-card {
+  display: block; 
 }
