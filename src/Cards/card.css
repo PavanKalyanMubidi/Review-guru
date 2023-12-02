@@ -2,16 +2,13 @@
   background-color: #f8f8f8;
   border: 1px solid #f6dbdb;
   padding: 20px;
-  margin-top: 150px;
-  margin-bottom: 20px;
-  height: 340px;
-  width: 250px;
+  margin-top: 15px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
-
+.navbar-nav{
+  color: black;
+}
 .par {
-  margin-left: 120px;
-  margin-right: 100px;
   font-size: 17px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: oblique;
@@ -20,36 +17,40 @@
 .card12 {
   background-color: #f8f8f8;
   border: 1px solid #f6dbdb;
-  padding: 20px;
-  margin-top: 150px;
-  margin-bottom: 20px;
-  height: fit-content;
-  width: 64%;
+  margin-top: 15px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-  align-items: center;
 }
 
 .reviewbtn {
   background-color: red;
   color: white;
-  border-color: red;
+  border-color: white;
   height: 50px;
   width: 300px;
-  align-items: center;
-  padding-left: 40px;
   font-size: 20px;
   font-style: oblique;
   font-weight: bold;
   margin-top: 20px;
-  margin-left: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.ram {
+  background-color: rgb(75, 75, 133);
+  color: white;
+  border-radius: 5px;
+  height: 50px;
+  width: 300px;
+  margin-top: 23px;
+  font-size: 20px;
+  font-style: oblique;
+  font-weight: bold;
+  border-style: none;
 }
 
 .favorite {
   height: 30px;
   width: 30px;
   border: none;
-  margin-left: 10px;
   background-color: none;
 }
 
@@ -64,31 +65,20 @@
   border-color: green;
   color: white;
   border-radius: 10px;
-  margin-left: 120px;
   height: 30px;
   width: 70px;
-  margin-right: 100px;
 }
 
 .image {
-  width: 200px;
-  height: 100px;
-  margin-top: 100px;
+  height: 220px;
+  margin-top: 150px; 
 }
 
-.range {
-  margin-left: 40px;
-  margin-right: 50px;
-}
-
-.ram {
-  background-color: rgb(75, 75, 133);
-  color: white;
-  border-radius: 10px;
-  height: 50px;
-  width: 300px;
-  margin-left: 200px;
-  margin-top: 23px;
+.reviewguru{
+    background-color : gray;
+    border-radius: 10px;
+    color: white;
+    margin-top: 15px;
 }
 
 .logo-image1 {
@@ -98,8 +88,7 @@
 }
 
 .logo-image {
-  height: 80px;
-  width: 100px;
+  height: 200px;
 }
 
 .card123 {
@@ -109,10 +98,9 @@
   margin-top: 20px;
   margin-bottom: 20px;
   height: fit-content;
-  width: 75vw;
+  width: fit-content;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
   align-items: center;
-  margin-left: 40px;
 }
 
 .comment {
@@ -125,24 +113,7 @@
   border-color: blue;
 }
 
-.shifted-content {
-  margin-left: 0; 
-  transition: margin-left 0.3s ease; 
-}
-
-
-.content-container {
-  transition: margin-left 0.3s ease; 
-}
-
-
-@media (min-width: 768px) {
-  .shifted-content {
-    margin-left: 250px; 
-  }
-}
-
-notification-wrapper {
+.notification-wrapper {
   position: relative;
   display: inline-block;
 }
@@ -167,16 +138,4 @@ notification-wrapper {
 
 .notification-wrapper:hover .alert-card {
   display: block; 
-}
-/* Existing CSS */
-
-/* For smaller screens */
-@media (max-width: 768px) {
-  /* Modify styles for responsiveness */
-
-  .card12 {
-    width: 90%; /* Adjust the width for smaller screens */
-  }
-
-  /* Add more modifications as needed for other elements */
 }
