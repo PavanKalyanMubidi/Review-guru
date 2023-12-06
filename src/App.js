@@ -3,7 +3,7 @@ import Index1 from './Cards';
 import Index from './Home';
 
 import { Routes,Route } from 'react-router-dom';
-import Profile from './Profile';
+import Profile from './Profile/Profile';
 
 function App() {
   return (

@@ -48,10 +48,10 @@ const Index1 = () => {
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-light navbar-light shadow">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light shadow navbar-content">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src={logo1} alt="logo-image" className="logo-image img-" />
+            <img src={logo1} alt="logo-image" className="logo-image" />
           </a>
           <button
             class="navbar-toggler"
@@ -93,7 +93,7 @@ const Index1 = () => {
                   Privacy Policy
                 </a>
               </li>
-              <div className="d-flex flex-row mx-5">
+              <div className="profile d-flex flex-row mx-5">
                 <li>
                   <div className="btn-group dropleft dropdown-user mt-2">
                     <a href="/profile">
@@ -107,9 +107,9 @@ const Index1 = () => {
                     </a>
                   </div>
                 </li>
-                <li className="nav-item dropdown mx-5">
+                <li class="nav-item dropdown">
                   <a
-                    className="nav-link dropdown-toggle"
+                    class="nav-link dropdown-toggle1"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -119,9 +119,9 @@ const Index1 = () => {
                       style={{ fontSize: "25px" }}
                     ></i>
                   </a>
-                  <ul className="dropdown-menu">
+                  <ul class="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <a class="dropdown-item" href="#">
                         Notifications
                       </a>
                     </li>
@@ -213,10 +213,55 @@ const Index1 = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6">
-            <button className="reviewbtn">
-              <span className="material-symbols-outlined">edit_square</span>
+            <button className="btn btn-danger reviewbtn">
+              <span className="material-symbols-outlined mt-1">edit_square</span>
               Write Your Review
             </button>
+            <div className="modal" id="myModal">
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h4 className="modal-title">Add Review</h4>
+                      <button
+                        type="button"
+                        className="btn-close mb-2"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div className="modal-body">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter your comment"
+                        value={newComment}
+                        onChange={(e) => setNewComment(e.target.value)}
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button
+                        type="button"
+                        className="btn btn-primary mb-2"
+                        onClick={() => {
+                          addComment();
+                          document
+                            .getElementById("myModal")
+                            .classList.remove("show");
+                        }}
+                        data-bs-dismiss="modal"
+                      >
+                        Add
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-secondary mb-2"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
           <div className="col-12 col-md-6">
             <button className="ram">Owner? Claim this Business</button>
@@ -228,18 +273,18 @@ const Index1 = () => {
           <div className="col-12 col-sm-12 col-md-6 col-lg-6 card123">
             <div>
               <button
-                className="comment mb-2"
+                className="comment btn btn-primary mb-2"
                 onClick={() => submitReview("New review")}
               >
                 Submit Review
               </button>
               <button
-                className="comment mb-2"
+                className="comment btn btn-primary mb-2"
                 onClick={() => editReview(0, "Updated review")}
               >
                 Edit Review
               </button>
-              <button className="comment mb-2" onClick={() => deleteReview(0)}>
+              <button className="comment btn btn-primary mb-2" onClick={() => deleteReview(0)}>
                 Delete Review
               </button>
               <button
@@ -294,10 +339,10 @@ const Index1 = () => {
                   </div>
                 </div>
               </div>
-              <button className="comment mb-2" onClick={incrementLikes}>
+              <button className="comment btn btn-primary mb-2" onClick={incrementLikes}>
                 Like
               </button>
-              <button className="comment mb-2" onClick={toggleFollowing}>
+              <button className="comment  btn btn-primary mb-2" onClick={toggleFollowing}>
                 {following ? "Unfollow" : "Follow"}
               </button>
             </div>
