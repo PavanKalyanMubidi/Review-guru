@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Profile.css"
+import Navbar from '../Navbar/navbar';
+import Footer from '../Footer/footer';
 const Profile = () => {
   const userData = {
     username: 'PavanKalyan',
@@ -9,6 +11,8 @@ const Profile = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="container">
       <div className="row">
         <div className="col-md-8 offset-md-2">
@@ -28,6 +32,8 @@ const Profile = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

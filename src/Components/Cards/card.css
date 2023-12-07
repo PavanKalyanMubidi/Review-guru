@@ -4,10 +4,13 @@
   padding: 20px;
   margin-top: 15px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
-.navbar-nav{
+
+.navbar-nav {
   color: black;
 }
+
 .par {
   font-size: 17px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -15,12 +18,13 @@
 }
 
 .card12 {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSea2tc-RnRreZ7f6Plh-KVe5ff_n0y6Y_Jizk0OVMmwaH5G-9X6Ol6cUPJxgJ_gGsc_vo&usqp=CAU");
+  background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid #f6dbdb;
   margin-top: 15px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .reviewbtn {
@@ -36,11 +40,11 @@
   font-weight: bold;
   margin-top: 20px;
   border-radius: 5px;
-  padding: 10px; 
+  padding: 10px;
 }
 
 .reviewbtn .material-symbols-outlined {
-  margin-right: 5px; 
+  margin-right: 5px;
 }
 
 .ram {
@@ -49,12 +53,12 @@
   border-radius: 5px;
   height: 50px;
   width: 300px;
-  margin-top: 20px; 
+  margin-top: 20px;
   font-size: 20px;
   font-style: oblique;
   font-weight: bold;
   border-style: none;
-  padding: 12px; 
+  padding: 12px;
 }
 
 .favorite {
@@ -81,14 +85,14 @@
 
 .image {
   height: 220px;
-  margin-top: 150px; 
+  margin-top: 150px;
 }
 
-.reviewguru{
-    background-color : gray;
-    border-radius: 10px;
-    color: white;
-    margin-top: 15px;
+.reviewguru {
+  background-color: gray;
+  border-radius: 10px;
+  color: white;
+  margin-top: 15px;
 }
 
 .logo-image1 {
@@ -114,6 +118,7 @@
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSea2tc-RnRreZ7f6Plh-KVe5ff_n0y6Y_Jizk0OVMmwaH5G-9X6Ol6cUPJxgJ_gGsc_vo&usqp=CAU");
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 10px;
 }
 
 .comment {
@@ -136,17 +141,17 @@
 
 .alert-card {
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
   width: 200px;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-top: none; 
+  border-top: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  display: none; 
+  display: none;
 }
 
 .notification-wrapper:hover .alert-card {
-  display: block; 
+  display: block;
 }

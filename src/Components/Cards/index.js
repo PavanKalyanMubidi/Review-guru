@@ -1,10 +1,10 @@
 import React from "react";
 import "./card.css";
-import logo from "../bg removed review guru logo.png";
-import logo1 from "../reviewguru.jpg";
 import { useState } from "react";
+import Navbar from "../Navbar/navbar";
+import Footer from "../Footer/footer";
 
-const Index1 = () => {
+function Index1() {
   const [reviews, setReviews] = useState([]);
   const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState(0);
@@ -40,98 +40,9 @@ const Index1 = () => {
     setFollowing(!following);
   };
 
-  const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
-
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen1(!isDropdownOpen1);
-  };
-
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-light navbar-light shadow navbar-content">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src={logo1} alt="logo-image" className="logo-image" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse mx-5" id="collapsibleNavbar">
-            <ul className="navbar-nav">
-              <li class="nav-item">
-                <a className="nav-link" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  About Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  Products
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  Contact Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  Terms & Conditions
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  Privacy Policy
-                </a>
-              </li>
-              <div className="profile d-flex flex-row mx-5">
-                <li>
-                  <div className="btn-group dropleft dropdown-user mt-2">
-                    <a href="/profile">
-                      <i
-                        className="fa fa-user-o dropdown-toggle"
-                        onClick={handleDropdownToggle}
-                        aria-haspopup="true"
-                        style={{ fontSize: "25px", color: "black" }}
-                        aria-expanded={isDropdownOpen1 ? "true" : "false"}
-                      ></i>
-                    </a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle1"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                  >
-                    <i
-                      class="fa-regular fa-bell"
-                      style={{ fontSize: "25px" }}
-                    ></i>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Notifications
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
       <div className="container">
         <div className="row">
           <div class="col-sm-12 col-md-6 col-lg-4">
@@ -197,7 +108,7 @@ const Index1 = () => {
             </div>
             <hr />
 
-            <div class="d-flex flex-column mb-2">
+            <div className="d-flex flex-column mb-0">
               <p>
                 <span class="material-symbols-outlined">location_on</span> 25,
                 Main Road, Ramamurthy Nagar, Bengaluru 5789053
@@ -213,55 +124,56 @@ const Index1 = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6">
-            <button className="btn btn-danger reviewbtn">
+            <button className="btn btn-danger reviewbtn " data-bs-toggle="modal"
+              data-bs-target="#myModal">
               <span className="material-symbols-outlined mt-1">edit_square</span>
               Write Your Review
             </button>
             <div className="modal" id="myModal">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <h4 className="modal-title">Add Review</h4>
-                      <button
-                        type="button"
-                        className="btn-close mb-2"
-                        data-bs-dismiss="modal"
-                      ></button>
-                    </div>
-                    <div className="modal-body">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter your comment"
-                        value={newComment}
-                        onChange={(e) => setNewComment(e.target.value)}
-                      />
-                    </div>
-                    <div className="modal-footer">
-                      <button
-                        type="button"
-                        className="btn btn-primary mb-2"
-                        onClick={() => {
-                          addComment();
-                          document
-                            .getElementById("myModal")
-                            .classList.remove("show");
-                        }}
-                        data-bs-dismiss="modal"
-                      >
-                        Add
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-secondary mb-2"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h4 className="modal-title">Add Review</h4>
+                    <button
+                      type="button"
+                      className="btn-close mb-2"
+                      data-bs-dismiss="modal"
+                    ></button>
+                  </div>
+                  <div className="modal-body">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Enter your comment"
+                      value={newComment}
+                      onChange={(e) => setNewComment(e.target.value)}
+                    />
+                  </div>
+                  <div className="modal-footer">
+                    <button
+                      type="button"
+                      className="btn btn-primary mb-2"
+                      onClick={() => {
+                        addComment();
+                        document
+                          .getElementById("myModal")
+                          .classList.remove("show");
+                      }}
+                      data-bs-dismiss="modal"
+                    >
+                      Add
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary mb-2"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
           <div className="col-12 col-md-6">
             <button className="ram">Owner? Claim this Business</button>
@@ -364,6 +276,7 @@ const Index1 = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

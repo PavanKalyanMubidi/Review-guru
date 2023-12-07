@@ -1,102 +1,12 @@
 import React from "react";
 import "./index.css";
-import logo from "../bg removed review guru logo.png";
-import logo1 from "../reviewguru.jpg";
-import { useState } from "react";
+import Navbar from "../Navbar/navbar";
+import Footer from "../Footer/footer";
 
 const Index = () => {
-  const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
-
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen1(!isDropdownOpen1);
-  };
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-light navbar-light shadow navbar-content">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src={logo1} alt="logo-image" className="logo-image" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse mx-5" id="collapsibleNavbar">
-            <ul className="navbar-nav">
-              <li class="nav-item">
-                <a className="nav-link" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  About Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  Products
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  Contact Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  Terms & Conditions
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link" href="#">
-                  Privacy Policy
-                </a>
-              </li>
-              <div className="profile d-flex flex-row mx-5">
-                <li>
-                  <div className="btn-group dropleft dropdown-user mt-2">
-                    <a href="/profile">
-                      <i
-                        className="fa fa-user-o dropdown-toggle"
-                        onClick={handleDropdownToggle}
-                        aria-haspopup="true"
-                        style={{ fontSize: "25px", color: "black" }}
-                        aria-expanded={isDropdownOpen1 ? "true" : "false"}
-                      ></i>
-                    </a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle1"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                  >
-                    <i
-                      class="fa-regular fa-bell"
-                      style={{ fontSize: "25px" }}
-                    ></i>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Notifications
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
+      <Navbar />
       <div className="main-container container fluid mt-3">
         <h1 className="main-heading">The Ultimate Platform For Review's</h1>
         <div className="search-container">
@@ -112,7 +22,6 @@ const Index = () => {
         </h3>
         <h5 className="sub2-heading">Better service starts here.....</h5>
       </div>
-
       <div className="container d-flex flex-wrap mt-4">
         <div className="row">
           <h3 className="blue-text">COMPANIES</h3>
@@ -832,6 +741,7 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
