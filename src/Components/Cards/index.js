@@ -48,7 +48,7 @@ function Index1() {
           <div class="col-sm-12 col-md-6 col-lg-4">
             <div className="card11">
               <img
-                src="https://www.bestmediainfo.com/uploads/2013/06/jetking.jpg"
+                src="https://www.wipro.com/content/dam/nexus/en/wipro-logo-new-og-502x263.jpg"
                 className="image img-fluid"
                 alt="Image"
               />

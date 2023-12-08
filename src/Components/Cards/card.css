@@ -2,7 +2,16 @@
   background-color: #f8f8f8;
   border: 1px solid #f6dbdb;
   padding: 20px;
-  margin-top: 15px;
+  margin-top: 25px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.card12 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #f6dbdb;
+  margin-top: 25px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
@@ -15,16 +24,6 @@
   font-size: 17px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: oblique;
-}
-
-.card12 {
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid #f6dbdb;
-  margin-top: 15px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
 }
 
 .reviewbtn {

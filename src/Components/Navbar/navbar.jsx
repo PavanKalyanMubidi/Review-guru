@@ -9,6 +9,10 @@ function Navbar() {
     const handleDropdownToggle = () => {
         setIsDropdownOpen1(!isDropdownOpen1);
     };
+    
+    function notification() {
+        alert('Notification is Clicked!');
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-light navbar-light shadow navbar-content">
@@ -84,7 +88,7 @@ function Navbar() {
                                     </a>
                                     <ul className="dropdown-menu">
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <a className="dropdown-item" href="#" onClick={notification}>
                                                 Notifications
                                             </a>
                                         </li>

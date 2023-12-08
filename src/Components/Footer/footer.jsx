@@ -1,66 +1,77 @@
 import React from "react";
 import "./footer.css";
-
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-12  col-md-4">
+                    <div className="col-12 col-md-4">
                         <ul style={{ listStyle: "none" }}>
-                            <h3>About Us</h3>
-                            <li>Meet Our Team</li>
-                            <li>Our Responsibilities</li>
-                            <li>Our Codes</li>
-                            <li>Our Values</li>
+                            <h3 style={{ fontWeight: "900" }}>About Us</h3>
+                            <div className="mt-3">
+                                <li>Meet Our Team</li>
+                                <li>Our Responsibilities</li>
+                                <li>Our Codes</li>
+                                <li>Our Values</li>
+                            </div>
                         </ul>
                     </div>
-                    <div className="col-12  col-md-4 ">
+                    <div className="col-12 col-md-4">
                         <ul style={{ listStyle: "none" }}>
-                            <h3>Careers</h3>
-                            <li>Apply Online</li>
-                            <li>Available Positions</li>
+                            <h3 style={{ fontWeight: "900" }}>Careers</h3>
+                            <div className="mt-3">
+                                <li>Apply Online</li>
+                                <li>Available Positions</li>
+                            </div>
                         </ul>
                     </div>
 
                     <div className="col-12 col-md-4">
                         <ul style={{ listStyle: "none" }}>
-                            <h3>Contact Us</h3>
-                            <li>
-                                <i className="fas fa-phone-alt"></i> +91 9234567890
-                            </li>
-                            <li>
-                                <i className="far fa-envelope"></i> perfex@gmail.com
-                            </li>
-                            <li>
-                                <i className="fas fa-map-marker-alt"></i> Kavuri Hills, Masthan Nagar,Hyd,India.
-                            </li>
+                            <h3 style={{ fontWeight: "900" }}>Contact Us</h3>
+                            <div className="mt-3">
+                                <li>
+                                    <i className="fas fa-phone-alt mx-2"></i> +91 9234567890
+                                </li>
+                                <li>
+                                    <i className="far fa-envelope mx-2"></i> perfex@gmail.com
+                                </li>
+                                <li>
+                                    <i className="fas fa-map-marker-alt mx-2"></i> Kavuri Hills, Masthan Nagar,Hyd,India.
+                                </li>
+                            </div>
                         </ul>
                     </div>
                     <div className="col-12 col-md-4"></div>
 
-                    <div class="col-12 col-md-6">
+                    <div className="col-12 col-md-6">
                         <div>
-                            <div class="col-12 col-md-6">
-                                <h3 class="header1">Connect With Us</h3>
-                                <div class="d-flex flex-row">
+                            <div className="col-12 col-md-6">
+                                <h3 className="header1">Connect With Us</h3>
+                                <div className="d-flex flex-row mr-2">
                                     <a href="https://www.linkedin.com/" target="_blank">
-                                        <i class="fab fa-linkedin icons1"></i>
+                                        <LinkedInIcon style={{ fontSize: "2.5rem"}} />
                                     </a>
                                     <a href="https://github.com/" target="_blank">
-                                        <i class="fab fa-github icons2"></i>
+                                        <GitHubIcon style={{ fontSize: "2.5rem" ,color:"white"}} />
                                     </a>
                                     <a href="https://www.facebook.com/" target="_blank">
-                                        <i class="fab fa-facebook icons1"></i>
+                                        <FacebookIcon style={{ fontSize: "2.5rem" ,color:"white"}} />
                                     </a>
                                     <a href="https://www.instagram.com/" target="_blank">
-                                        <i class="fab fa-instagram icons4"></i>
+                                        <InstagramIcon style={{ fontSize: "2.5rem", color: "purple" }} />
                                     </a>
                                     <a href="https://twitter.com/" target="_blank">
-                                        <i class="fab fa-twitter icons5"></i>
+                                        <TwitterIcon style={{ fontSize: "3rem",color:"rgb(53, 104, 245)"}} />
                                     </a>
                                     <a href="https://www.youtube.com/" target="_blank">
-                                        <i class="fab fa-youtube icons6"></i>
+                                        <YouTubeIcon style={{ fontSize: "3rem", color: "red" }} />
                                     </a>
                                 </div>
                             </div>
